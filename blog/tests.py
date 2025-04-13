@@ -8,6 +8,11 @@ from .models import Category, Post
 
 class UserLoginTestCase(APITestCase):
     def setUp(self):
+      
+        Post.objects.all().delete()
+        Category.objects.all().delete()
+        User.objects.all().delete()
+        
         self.credentials = {
             'username': 'testuser',
             'password': 'testpassword',
