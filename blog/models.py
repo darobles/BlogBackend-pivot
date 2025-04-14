@@ -47,14 +47,7 @@ class Post(models.Model):
     
     def save(self, *args, **kwargs):
         if not self.slug:
-            base_slug = slugify(self.title)
-            self.slug = base_slug
-            counter = 1
-            
-            while Post.objects.filter(slug=self.slug).exists():
-                self.slug = f"{base_slug}-{counter}"
-                counter += 1
-                                    
+            self.slug = slugify(self.title)
         super().save(*args, **kwargs)
 
 class Comment(models.Model):
