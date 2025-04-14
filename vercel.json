@@ -12,7 +12,7 @@
   ],
   "functions": {
     "core/wsgi.py": {
-      "maxDuration": 30
+      "maxDuration": 10
     }
   },
   "routes": [
