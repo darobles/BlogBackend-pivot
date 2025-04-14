@@ -1,4 +1,4 @@
-# blogBackenda
+# blogBackend
 
 A complete blog backend developed with Django and Django REST Framework, optimized for deployment on Vercel and supporting PostgreSQL (Neon).
 
